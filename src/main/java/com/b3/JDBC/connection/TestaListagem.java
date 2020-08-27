@@ -1,8 +1,8 @@
 package com.b3.JDBC.connection;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.Statement;
 
 public class TestaListagem {
 
@@ -11,9 +11,9 @@ public class TestaListagem {
 		ConnectionFactory connectionFactory = new ConnectionFactory();
 		Connection connection = connectionFactory.recuperarConexao();
 
-		Statement stm = connection.createStatement();
+		PreparedStatement stm = connection.prepareStatement("SELECT ID, NOME, DESCRICAO FROM PRODUTO");
 
-		stm.execute("SELECT ID, NOME, DESCRICAO FROM PRODUTO");
+		stm.execute();
 		ResultSet rst = stm.getResultSet();
 
 		while (rst.next()) {
