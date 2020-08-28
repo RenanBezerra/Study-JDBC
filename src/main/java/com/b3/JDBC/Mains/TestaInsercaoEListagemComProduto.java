@@ -1,4 +1,4 @@
-package com.b3.JDBC.service;
+package com.b3.JDBC.Mains;
 
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -20,7 +20,7 @@ public class TestaInsercaoEListagemComProduto {
 			List<Produto> listaDeProdutos = produtoDAO.listar();
 			listaDeProdutos.stream().forEach(lp -> System.out.println(lp));
 		}
-		System.out.println(comoda);
+		//System.out.println(comoda);
 	}
 
 }
