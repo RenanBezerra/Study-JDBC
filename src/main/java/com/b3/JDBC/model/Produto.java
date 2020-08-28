@@ -1,11 +1,10 @@
 package com.b3.JDBC.model;
 
 import lombok.Data;
-import lombok.ToString;
 
 @Data
 public class Produto {
-	
+
 	private Integer id;
 	private String nome;
 	private String descricao;
@@ -15,11 +14,10 @@ public class Produto {
 		this.nome = nome;
 		this.descricao = descricao;
 	}
-	
+
 	@Override
 	public String toString() {
-		return String.format("O produto criado foi: %d, %s, %s", 
-				this.id,this.nome,this.descricao);
+		return String.format("O produto criado foi: %d, %s, %s", this.id, this.nome, this.descricao);
 	}
 
 }
