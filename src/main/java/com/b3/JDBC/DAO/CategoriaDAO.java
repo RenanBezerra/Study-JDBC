@@ -19,7 +19,7 @@ public class CategoriaDAO {
 	
 	public List<Categoria> listar() throws SQLException {
 		List<Categoria> categorias = new ArrayList<>();
-		
+		System.out.println("-------------------- utilizando listar");
 		String sql ="SELECT ID, NOME FROM CATEGORIA";
 		
 		try(PreparedStatement pstm = connection.prepareStatement(sql)){
@@ -38,4 +38,6 @@ public class CategoriaDAO {
 		}
 		return categorias;
 	}
+
+	
 }
