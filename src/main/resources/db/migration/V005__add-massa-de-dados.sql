@@ -1,16 +1,4 @@
 
-
-set foreign_key_checks = 0;
-
-delete from produto;
-delete from categoria;
-
-set foreign_key_checks = 1;
-
-alter table produto auto_increment = 1;
-alter table categoria auto_increment = 1;
-
-
 INSERT INTO categoria (id,nome) VALUES (1,'ELETRONICOS');
 INSERT INTO categoria (id,nome) VALUES (2,'ELETRODOMESTICOS');
 INSERT INTO categoria (id,nome) VALUES (3,'MOVEIS');
