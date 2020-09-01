@@ -5,8 +5,11 @@ import java.sql.SQLException;
 
 import javax.sql.DataSource;
 
+import org.springframework.stereotype.Service;
+
 import com.mchange.v2.c3p0.ComboPooledDataSource;
 
+@Service
 public class ConnectionFactory {
 
 	public DataSource dataSource;
